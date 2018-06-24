@@ -1,0 +1,107 @@
+*{
+    margin:0;
+    padding: 0;
+}
+body{
+    background: #3E3F53 !important;
+}
+.side-bar{
+    width: 94px;
+    height: 100%;
+    position: fixed;
+    margin-top: -75px;
+    background: #262734;
+    box-shadow: 0px 4px 20px rgba(38, 39, 52, 0.8);
+    border-radius: 5px 40px 40px 5px;
+}
+.nav{
+    height: 70px;
+    background: #343548;
+    border-radius: 5px 5px 40px 40px;
+}
+.nav-container{
+    width: 1400px;
+    padding: 20px 20px 20px 170px;
+}
+.logo-container{
+    padding: 20px 30px; 
+}
+.logo{
+    font-weight: 900;
+    line-height: normal;
+    font-size: 44px;
+    color: #53556E;
+}
+.title{
+    font-weight: 600;
+    line-height: normal;
+    font-size: 26px;
+    float: left;
+    color: #53556E;
+}
+.book-btn{
+    padding: 6px 15px;
+    background: rgb(69, 71, 94);
+    border-radius: 20px;
+    font-weight: bold;
+    line-height: normal;
+    color: #94959F;
+    float: right;
+    margin-right: 50px;
+    text-decoration: none;
+}  
+.book-btn:hover{
+    background: rgb(106, 108, 136);
+    color: rgb(176, 177, 189);
+}
+.data-cube{
+    width: 156px;
+    height: 132px;
+}
+.main{
+    padding: 20px 10px 10px 170px;
+}
+.top-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5em;
+}
+.bottom-cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5em;
+    grid-auto-rows: minmax(200px, auto);       
+}
+.right-items{
+    width: 320px;
+    display: grid;
+    float: right;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+    grid-auto-rows: minmax(180px, auto);
+}
+.available-rooms{
+    max-width: 822px;
+    height: 360px;
+}
+.requests{
+    max-width: 822px;
+    height: 260px;
+}
+.all-cards{
+    background: #343548;
+    box-shadow: 0px 0px 20px rgba(52, 53, 72, 0.56);
+    border-radius: 10px;
+}
+.bottom-right{
+    width: 320px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+}
+.booked-rooms{
+    grid-column: 1/3;
+    max-width: 370px;
+    height: 205px;
+    border-radius: 10px;
+}
