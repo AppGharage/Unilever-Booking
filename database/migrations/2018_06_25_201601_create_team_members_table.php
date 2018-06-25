@@ -15,7 +15,9 @@ class CreateTeamMembersTable extends Migration
     {
         Schema::create('team_members', function (Blueprint $table) {
             $table->increments('id');
-            $table->timestamps();
+            $table->string('team_id');
+            $table->string('staff_id');
+            $table->dateTime('created_at');
         });
     }
 
