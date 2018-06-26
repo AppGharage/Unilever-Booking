@@ -31,8 +31,5 @@
           <span class="tooltiptexts">Upload Academic Calender</span>
    
         </a><br>
-        <a href="#"  class="tooltips">
-            <ion-icon class="sidebar-icon" name="ios-notifications-outline" md="ios-notifications-outline"></ion-icon>        
-            <span class="tooltiptexts">View Notifications</span>
-          </a><br>
+     
 </div>

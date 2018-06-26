@@ -10,6 +10,7 @@ body{
     height: 100%;
     position: fixed;
     margin-top: -75px;
+    padding: 0px 0px 50px 0px;
     background: #262734;
     box-shadow: 0px 4px 20px rgba(38, 39, 52, 0.8);
     border-radius: 5px 40px 40px 5px;
@@ -53,12 +54,12 @@ body{
 
 .sidebar-icon{
     font-size: 26px;
-    color: #555555;
-    margin: 30px 35px ;
+    color: #3d3e55;
+    margin: 30px 32px ;
     transition:all 0.13s ease-in-out; 
 }
 .sidebar-icon:hover{
-    color:rgb(255, 192, 34);
+    color:#565774;
 }
 .logo{
     font-weight: 900;
