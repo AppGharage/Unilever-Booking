@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Booking;
 
 class BookingsController extends Controller
 {
@@ -13,7 +14,7 @@ class BookingsController extends Controller
      */
     public function index()
     {
-        return view('pages.dashboard');
+        return view('bookings.index');
     }
 
     /**
@@ -23,7 +24,7 @@ class BookingsController extends Controller
      */
     public function create()
     {
-        //
+        return view('bookings.create');
     }
 
     /**
@@ -34,7 +35,29 @@ class BookingsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'meeting_room' => 'required',
+            'agenda'  => 'required',
+            'booked_by'   => 'required',
+            'booked_for'     => 'required',
+            'start_time'     => 'required',
+            'end_time'     => 'required',
+            'status'     => 'required',
+        ]);
+
+        //CREATE BOOKING
+        $booking = new Booking;
+        $booking->meeting_room = $request->input('meeting_room');
+        $booking->agenda  = $request->input('agenda');
+        $booking->booked_by  = $request->input('booked_by');
+        $booking->booked_for  = $request->input('booked_for');
+        $booking->start_time  = $request->input('start_time');
+        $booking->end_time  = $request->input('end_time');
+        $booking->status  = $request->input('status');
+        $booking->save();
+
+        return redirect('/bookings')->with('success', 'Great Job!, Booking Created! :)');
+    
     }
 
     /**
@@ -45,7 +68,8 @@ class BookingsController extends Controller
      */
     public function show($id)
     {
-        //
+        $booking = Booking::find($id);
+       return view('bookings.single')->with('booking', $booking);
     }
 
     /**
@@ -56,7 +80,8 @@ class BookingsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $booking = Booking::find($id);
+       return view('bookings.edit')->with('booking', $booking);
     }
 
     /**
@@ -68,7 +93,18 @@ class BookingsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $booking = Booking::find($id);
+        $booking->meeting_room = $request->input('meeting_room');
+        $booking->agenda  = $request->input('agenda');
+        $booking->booked_by  = $request->input('booked_by');
+        $booking->booked_for  = $request->input('booked_for');
+        $booking->start_time  = $request->input('start_time');
+        $booking->end_time  = $request->input('end_time');
+        $booking->status  = $request->input('status');
+        $booking->save();
+
+        return redirect('/bookings')->with('success', 'Great Job!, Booking Updated! :)');
+    
     }
 
     /**
@@ -79,6 +115,9 @@ class BookingsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $booking = booking::find($id);
+        $booking->delete();
+        return redirect('/bookings')->with('success','Whohoo! Booking Deleted, Now Lets Add More ;)');
+    
     }
 }
