@@ -10,7 +10,6 @@ body{
     height: 100%;
     position: fixed;
     margin-top: -75px;
-    padding: 0px 0px 50px 0px;
     background: #262734;
     box-shadow: 0px 4px 20px rgba(38, 39, 52, 0.8);
     border-radius: 5px 40px 40px 5px;
@@ -28,6 +27,27 @@ body{
     padding: 20px 30px; 
 }
 
+.the-card{
+    background: #fff;
+    margin: auto;
+    border-radius: 5px;
+    max-width: 1000px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .045)
+}
+.the-header{
+    color: white;
+    text-align: center;
+    background: rgb(41, 158, 183)!important;
+    font-size: 20px;
+}
+.view-btn{
+   background: rgb(41, 158, 183)!important;
+   color:#fff;
+}
+.view-btn:hover{
+    background: rgb(42, 185, 218) !important;
+    color:#fff;
+ }
 .tooltips {
     position: relative;
     display: inline-block;

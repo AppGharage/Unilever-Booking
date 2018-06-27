@@ -3,14 +3,13 @@
         <h1 class="logo">B</h1>
     </div>
     <a href="/dashboard"  class="tooltips">
-        <ion-icon class="sidebar-icon" name="ios-speedometer" md="ios-speedometer"></ion-icon>
+        <i class="fas fa-tachometer-alt sidebar-icon"></i>
         <span class="tooltiptexts">Dashboard </span>
-    
       </a><br>
     
    
     <a href="/bookings"  class="tooltips">
-        <ion-icon class="sidebar-icon" name="ios-people" md="ios-people"></ion-icon>       
+        <i class="fas fa-clipboard-list sidebar-icon"></i>
         <span class="tooltiptexts">Reservations</span>
       </a><br>
     <a href="/create"  class="tooltips">
