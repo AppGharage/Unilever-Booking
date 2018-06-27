@@ -81,7 +81,7 @@ class BookingsController extends Controller
     public function edit($id)
     {
         $booking = Booking::find($id);
-       return view('bookings.edit')->with('booking', $booking);
+        return view('bookings.edit')->with('booking', $booking);
     }
 
     /**
