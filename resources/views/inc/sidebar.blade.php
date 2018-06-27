@@ -9,9 +9,9 @@
       </a><br>
     
    
-    <a href="/students"  class="tooltips">
+    <a href="/bookings"  class="tooltips">
         <ion-icon class="sidebar-icon" name="ios-people" md="ios-people"></ion-icon>       
-        <span class="tooltiptexts">Manage Students</span>
+        <span class="tooltiptexts">Reservations</span>
       </a><br>
     <a href="/create"  class="tooltips">
         <ion-icon class="sidebar-icon" name="ios-person-add" md="ios-person-add"></ion-icon> 

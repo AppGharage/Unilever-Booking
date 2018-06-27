@@ -14,7 +14,9 @@ class BookingsController extends Controller
      */
     public function index()
     {
-        return view('bookings.index');
+        $bookings = Booking::orderBy('meeting_room', 'desc')->paginate(10);
+        return view('bookings.index')->with('bookings', $bookings);
+        return view('dashboard')->with('bookings', $bookings);
     }
 
     /**
