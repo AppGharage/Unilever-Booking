@@ -27,16 +27,23 @@
                                         {{form::label('booked_by', 'Booked By')}}
                                         {{form::text('booked_by', '', ['class' => 'form-control', 'placeholder' => 'Nathan'])}}
                                     </div>  
-                                    <div>
-                                        <label for="start">Start Time</label>
-                                        <input type="time" id="start_time" name="start_time"
-                                       min="9:00" max="18:00" required />
+                                    <br>
+                                    <div class="the-form">
+                                            <label for="date">Date</label>
+                                            <input type="date" id="date" name="date"
+                                                   value="2018-07-22"
+                                                   min="2018-01-01" max="2048-12-31" />
+                                       
                                     </div>
                                     
                                     <div>
+                                            <label for="start">Start Time</label>
+                                            <input type="time" id="start_time" name="start_time"
+                                           min="9:00" max="18:00" required />
                                         <label for="end_time">End Time</label>
                                                 <input type="time" id="end_time" name="end_time"
                                                min="9:00" max="18:00" required />
+                                               
                                     </div>
                                     <div class="the-form">
                                         {{ form::label('booked', 'Booked')}}

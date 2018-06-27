@@ -19,6 +19,7 @@ class CreateBookingsTable extends Migration
             $table->string('agenda');
             $table->string('booked_for');
             $table->string('booked_by');
+            $table->date('date');
             $table->string('start_time');
             $table->string('end_time');
             $table->string('status');

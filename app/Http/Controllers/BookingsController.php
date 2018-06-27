@@ -42,6 +42,7 @@ class BookingsController extends Controller
             'agenda'  => 'required',
             'booked_by'   => 'required',
             'booked_for'     => 'required',
+            'date'     => 'required',
             'start_time'     => 'required',
             'end_time'     => 'required',
             'status'     => 'required',
@@ -53,6 +54,7 @@ class BookingsController extends Controller
         $booking->agenda  = $request->input('agenda');
         $booking->booked_by  = $request->input('booked_by');
         $booking->booked_for  = $request->input('booked_for');
+        $booking->date  = $request->input('date');
         $booking->start_time  = $request->input('start_time');
         $booking->end_time  = $request->input('end_time');
         $booking->status  = $request->input('status');
@@ -100,6 +102,7 @@ class BookingsController extends Controller
         $booking->agenda  = $request->input('agenda');
         $booking->booked_by  = $request->input('booked_by');
         $booking->booked_for  = $request->input('booked_for');
+        $booking->date  = $request->input('date');
         $booking->start_time  = $request->input('start_time');
         $booking->end_time  = $request->input('end_time');
         $booking->status  = $request->input('status');
