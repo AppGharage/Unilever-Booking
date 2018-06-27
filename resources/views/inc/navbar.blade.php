@@ -1,7 +1,8 @@
 <div class="nav">
     <div class="nav-container">
         <h3 class="title">Dashboard</h3>
-        <a href="/create" class="book-btn">Book Room</a>
+        <a href="/create" class="book-btn"> <i class="fas fa-calendar-plus"></i>
+              Book Room</a>
         <ul class="navbar-nav ml-auto float-right">
             <!-- Authentication Links -->
             @guest

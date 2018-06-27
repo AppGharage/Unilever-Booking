@@ -13,17 +13,17 @@
         <span class="tooltiptexts">Reservations</span>
       </a><br>
     <a href="/create"  class="tooltips">
-        <ion-icon class="sidebar-icon" name="ios-person-add" md="ios-person-add"></ion-icon> 
-        <span class="tooltiptexts">Register Student</span>
+        <i class="fas fa-th-large sidebar-icon dash-icon"></i>
+        <span class="tooltiptexts">Meeting Rooms</span>
     </a> 
     <a href="/draft"  class="tooltips">
-        <ion-icon class="sidebar-icon" name="ios-create" md="ios-create"></ion-icon>
-        <span class="tooltiptexts">Draft Announcement</span>
+        <i class="fas fa-users sidebar-icon dash-icon"></i>
+        <span class="tooltiptexts">Manage Teams</span>
       
       </a><br>
       <a href="#"  class="tooltips">
-        <ion-icon class="sidebar-icon" name="ios-open" md="ios-open"></ion-icon>
-        <span class="tooltiptexts">Upload Time table</span>
+            <i class="fas fa-calendar-plus sidebar-icon dash-icon"></i>
+            <span class="tooltiptexts">Book Room</span>
       </a><br>
       <a href="#"  class="tooltips">
           <ion-icon class="sidebar-icon" name="ios-calendar" md="ios-calendar"></ion-icon>

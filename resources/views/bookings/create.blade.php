@@ -5,11 +5,11 @@
     @section('content')
     <div class="main">
     <br><br>
-                         <div class="card ">
-                                <div class="card-header">
-                                        <b>Book Room</b>        
+                         <div class="the-card">
+                                <div class="card-header the-header">
+                                        <b> <i class="fas fa-calendar-plus"></i> Book Room</b>        
                                 </div>
-                                <div class="card-body">
+                                <div class="container the-card">
                                     {!! Form::open(['action'=> 'BookingsController@store', 'method' => 'POST'] ) !!}
                                     <div class="the-form">
                                         {{form::label('meeting_room', 'Meeting Room')}}
@@ -25,7 +25,7 @@
                                     </div>
                                     <div class="the-form">
                                         {{form::label('booked_by', 'Booked By')}}
-                                        {{form::text('booked_by', '', ['class' => 'form-control', 'placeholder' => 'Nathan'])}}
+                                        {{form::text('booked_by', $user->last_name, ['class' => 'form-control', 'placeholder' => 'Nathan'])}}
                                     </div>  
                                     <br>
                                     <div class="the-form">
@@ -53,7 +53,7 @@
                                     </div> 
                                     <br>
                                     <div class="center-btn">
-                                       {{form::submit('Reserve Room', ['class'=> 'the-button'])}}
+                                       {{form::submit('Reserve Room', ['class'=> 'the-button btn btn-sm view-btn '])}}
                                     </div>    
                                      {!! Form::close() !!}
                             </div>
