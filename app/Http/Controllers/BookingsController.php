@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Booking;
 
@@ -26,7 +26,8 @@ class BookingsController extends Controller
      */
     public function create()
     {
-        return view('bookings.create');
+        $user = Auth::user();
+        return view('bookings.create')->with('user', $user);
     }
 
     /**
@@ -40,7 +41,6 @@ class BookingsController extends Controller
         $this->validate($request, [
             'meeting_room' => 'required',
             'agenda'  => 'required',
-            'booked_by'   => 'required',
             'booked_for'     => 'required',
             'date'     => 'required',
             'start_time'     => 'required',
