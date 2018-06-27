@@ -14,6 +14,7 @@
 Route::get('/', 'BookingsController@index');
 Route::resource('bookings','BookingsController');
 Route::get('/bookings', 'BookingsController@index');
+Route::get('/rooms', 'MeetingRoomsController@index');
 Route::get('/create', 'BookingsController@create');
 Auth::routes();
 
