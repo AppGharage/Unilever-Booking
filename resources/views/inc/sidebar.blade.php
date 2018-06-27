@@ -3,7 +3,7 @@
         <h1 class="logo">B</h1>
     </div>
     <a href="/dashboard"  class="tooltips">
-        <i class="fas fa-tachometer-alt sidebar-icon"></i>
+        <i class="fas fa-tachometer-alt sidebar-icon dash-icon"></i>
         <span class="tooltiptexts">Dashboard </span>
       </a><br>
     
