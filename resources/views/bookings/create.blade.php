@@ -10,32 +10,45 @@
                                         <b>Book Room</b>        
                                 </div>
                                 <div class="card-body">
-                                    {{-- {!! Form::open(['action'=> 'StudentsController@store', 'method' => 'POST'] ) !!}
+                                    {!! Form::open(['action'=> 'BookingsController@store', 'method' => 'POST'] ) !!}
                                     <div class="the-form">
-                                        {{form::label('firstname', 'First Name')}}
-                                        {{form::text('firstname', '', ['class' => 'form-control', 'placeholder' => 'Kojo'])}}
+                                        {{form::label('meeting_room', 'Meeting Room')}}
+                                        {{form::text('meeting_room', '', ['class' => 'form-control', 'placeholder' => 'Room 12'])}}
                                     </div>
                                     <div class="the-form">
-                                        {{form::label('lastname', 'Last Name')}}
-                                        {{form::text('lastname', '', ['class' => 'form-control', 'placeholder' => 'Yeboah'])}}
+                                        {{form::label('agenda', 'Agenda')}}
+                                        {{form::text('agenda', '', ['class' => 'form-control', 'placeholder' => 'Conference'])}}
                                     </div>
                                     <div class="the-form">
-                                        {{form::label('indexNo', 'Index No')}}
-                                        {{form::text('indexNo', '', ['class' => 'form-control', 'placeholder' => 'KUS01234'])}}
+                                        {{form::label('booked_for', 'Booked For')}}
+                                        {{form::text('booked_for', '', ['class' => 'form-control', 'placeholder' => 'Idris Alba'])}}
                                     </div>
                                     <div class="the-form">
-                                            {{form::label('email', 'Email')}}
-                                            {{form::email('email', '', ['class' => 'form-control', 'placeholder' => 'kojoyeboah@eample.com'])}}
+                                        {{form::label('booked_by', 'Booked By')}}
+                                        {{form::text('booked_by', '', ['class' => 'form-control', 'placeholder' => 'Nathan'])}}
                                     </div>  
+                                    <div>
+                                        <label for="start">Start Time</label>
+                                        <input type="time" id="start_time" name="start_time"
+                                       min="9:00" max="18:00" required />
+                                    </div>
+                                    
+                                    <div>
+                                        <label for="end_time">End Time</label>
+                                                <input type="time" id="end_time" name="end_time"
+                                               min="9:00" max="18:00" required />
+                                    </div>
                                     <div class="the-form">
-                                            {{form::label('phone', 'Phone')}}
-                                            {{form::number('phone', '', ['class' => 'form-control', 'maxlength' => '10','placeholder' => '0239876543'])}}
-                                    </div>  
+                                        {{ form::label('booked', 'Booked')}}
+                                        <input class="status" checked="checked" name="status" type="radio" value="Booked">
+                                        {{ form::label('available', 'Available')}}
+                                        <input class="status"  name="status" type="radio" value="Available">
+                                    </div> 
                                     <br>
                                     <div class="center-btn">
-                                       {{form::submit('Register', ['class'=> 'the-button'])}}
+                                       {{form::submit('Reserve Room', ['class'=> 'the-button'])}}
                                     </div>    
-                                     {!! Form::close() !!} --}}
+                                     {!! Form::close() !!}
                             </div>
                         </div> 
     </div>

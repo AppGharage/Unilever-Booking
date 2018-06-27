@@ -22,7 +22,8 @@ class CreateBookingsTable extends Migration
             $table->string('start_time');
             $table->string('end_time');
             $table->string('status');
-            $table->dateTime('created_at');
+            $table->timestamps();
+
         });
     }
 
