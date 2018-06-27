@@ -23,7 +23,19 @@ class TeamMembersController extends Controller
      */
     public function create()
     {
-        //
+        $this->validate($request, [
+            'team_id' => 'required',
+            'staff_id'  => 'required',
+        ]);
+
+        //CREATE meeting_room 
+        $team_member  = new MeetingRoom ;
+        $team_member ->team_id  = $request->input('team_id');
+        $team_member ->staff_id  = $request->input('staff_id');
+        $team_member ->save();
+
+        return redirect('/team-members')->with('success', 'Great Job!, Team Member  Created! :)');
+    
     }
 
     /**
