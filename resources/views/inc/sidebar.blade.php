@@ -12,16 +12,16 @@
         <i class="fas fa-clipboard-list sidebar-icon"></i>
         <span class="tooltiptexts">Reservations</span>
       </a><br>
-    <a href="/create"  class="tooltips">
+    <a href="/rooms"  class="tooltips">
         <i class="fas fa-th-large sidebar-icon dash-icon"></i>
         <span class="tooltiptexts">Meeting Rooms</span>
     </a> 
-    <a href="/draft"  class="tooltips">
+    <a href="/teams"  class="tooltips">
         <i class="fas fa-users sidebar-icon dash-icon"></i>
         <span class="tooltiptexts">Manage Teams</span>
       
       </a><br>
-      <a href="#"  class="tooltips">
+      <a href="/create"  class="tooltips">
             <i class="fas fa-calendar-plus sidebar-icon dash-icon"></i>
             <span class="tooltiptexts">Book Room</span>
       </a><br>
