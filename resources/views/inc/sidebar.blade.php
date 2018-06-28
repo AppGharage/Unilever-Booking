@@ -26,9 +26,15 @@
             <span class="tooltiptexts">Book Room</span>
       </a><br>
       <a href="/team-members"  class="tooltips">
-          <ion-icon class="sidebar-icon" name="ios-calendar" md="ios-calendar"></ion-icon>
+        <i class="fas fa-users sidebar-icon dash-icon"></i>
           <span class="tooltiptexts">Team Members</span>
    
         </a><br>
+
+      <a href="/attendance-lists"  class="tooltips">
+        <i class="fas fa-clipboard-list sidebar-icon"></i>
+        <span class="tooltiptexts">Attendance Lists</span>
+ 
+      </a><br>
      
 </div>
