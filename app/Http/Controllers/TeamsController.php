@@ -11,6 +11,16 @@ class TeamsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+             /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
         $teams = Team::orderBy('name', 'desc')->paginate(10);

@@ -12,6 +12,16 @@ class AttendanceListsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+             /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
         $attendance_lists = AttendanceList::orderBy('staff_id', 'desc')->paginate(10);

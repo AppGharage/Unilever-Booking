@@ -12,6 +12,16 @@ class MeetingRoomsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+             /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
         $meeting_rooms = MeetingRoom::orderBy('description', 'desc')->paginate(10);
