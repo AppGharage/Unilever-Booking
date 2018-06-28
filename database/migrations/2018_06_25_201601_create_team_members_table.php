@@ -17,7 +17,7 @@ class CreateTeamMembersTable extends Migration
             $table->increments('id');
             $table->string('team_id');
             $table->string('staff_id');
-            $table->dateTime('created_at');
+            $table->timestamps();
         });
     }
 
