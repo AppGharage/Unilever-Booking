@@ -64,7 +64,7 @@ class MeetingRoomsController extends Controller
     public function show($id)
     {
         $meeting_room = MeetingRoom::find($id);
-        return view('rooms.single')->with('name', $meeting_room);
+        return view('rooms.single')->with('meeting_room', $meeting_room);
     }
 
     /**
@@ -77,7 +77,7 @@ class MeetingRoomsController extends Controller
     {
         
         $meeting_room = MeetingRoom::find($id);
-        return view('rooms.edit')->with('name', $meeting_room);
+        return view('rooms.edit')->with('meeting_room', $meeting_room);
     }
 
     /**
