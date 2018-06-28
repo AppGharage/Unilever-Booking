@@ -17,6 +17,14 @@ body{
 .container{
     padding: 20px 10px;
 }
+.plus-btn{
+    float: left;
+}
+.cube-icon{
+    font-size: 64px;
+    color: #343548;
+    padding: 16px 55px;
+}
 .nav{
     height: 70px;
     background: #343548;

@@ -14,7 +14,9 @@
                         <div class="booked-rooms  all-cards">
     
                         </div>
-                        <div class="data-cube all-cards"></div>
+                        <div class="data-cube all-cards">
+                                <i class="fas fa-clipboard-check cube-icon"></i>
+                        </div>
                         <div class="data-cube all-cards"></div>
                     </div>
                 </div>
@@ -22,7 +24,6 @@
             <div class="bottom-cards">
                 <div class="left-item">
                     <div class="requests all-cards">
-    
                     </div>
                 </div>
                 <div class="bottom-right">
