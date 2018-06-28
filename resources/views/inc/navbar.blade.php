@@ -1,20 +1,23 @@
 <div class="nav">
     <div class="nav-container">
+        @guest   
+             <h3 class="title">Booking</h3>
+        @else 
         <h3 class="title">Dashboard</h3>
+        
         <a href="/create" class="book-btn"> <i class="fas fa-calendar-plus"></i>
               Book Room</a>
+         @endguest     
         <ul class="navbar-nav ml-auto float-right">
             <!-- Authentication Links -->
             @guest
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                </li>
+                    <p>
+                        <a class="btn btn-sm text-info" href="{{ route('login') }}">{{ __('Login') }}</a> |
+                        <a class="btn btn-sm text-info" href="{{ route('register') }}">{{ __('Register') }}</a>
+                    </p>
             @else
                 <li class="nav-item  pull-right dropdown">
-                    <a id="navbarDropdown " class="nav-link text-info dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                    <a id="navbarDropdown " class="nav-link user dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                         Hi {{ Auth::user()->first_name }}  <span class="caret"></span>
                     </a>
 
@@ -32,5 +35,6 @@
                 </li>
             @endguest
         </ul>
+        
     </div>
 </div>

@@ -27,7 +27,11 @@
 <body>
     <div id="app">
         @include('inc.navbar')
-        @include('inc.sidebar')
+        @guest   
+        
+        @else
+            @include('inc.sidebar')
+        @endguest
         <main >
             @yield('content')
         </main>
