@@ -135,6 +135,12 @@ body{
     color: #fff;
     text-decoration: none;
 }
+.messages-container{
+    max-width: 250px;
+    right: 30px;
+    bottom: 30px;
+    position: fixed;
+}
 .data-cube{
     width: 156px;
     height: 132px;

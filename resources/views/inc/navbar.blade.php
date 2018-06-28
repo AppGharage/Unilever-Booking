@@ -38,3 +38,8 @@
         
     </div>
 </div>
+@guest
+
+@else
+    <div class="messages-container">@include('inc.messages')</div>
+@endguest
