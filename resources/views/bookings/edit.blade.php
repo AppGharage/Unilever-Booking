@@ -59,7 +59,7 @@
                         <br>
                         {{form::hidden('_method', 'PUT')}}
                         <div class="center-btn">
-                                {{form::submit('Update', ['class'=> 'the-button btn btn-success btn-sm'])}}
+                                {{form::submit('Update Booking', ['class'=> 'the-button btn view-btn btn-sm'])}}
                         </div>  
                     {!! Form::close() !!}
               
