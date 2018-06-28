@@ -25,9 +25,9 @@
             <i class="fas fa-calendar-plus sidebar-icon dash-icon"></i>
             <span class="tooltiptexts">Book Room</span>
       </a><br>
-      <a href="#"  class="tooltips">
+      <a href="/team-members"  class="tooltips">
           <ion-icon class="sidebar-icon" name="ios-calendar" md="ios-calendar"></ion-icon>
-          <span class="tooltiptexts">Upload Academic Calender</span>
+          <span class="tooltiptexts">Team Members</span>
    
         </a><br>
      
