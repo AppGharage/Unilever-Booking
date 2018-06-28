@@ -17,6 +17,7 @@ Route::resource('bookings','BookingsController');
 Route::resource('team-members','TeamMembersController');
 Route::resource('teams','TeamsController');
 Route::resource('rooms','MeetingRoomsController');
+Route::resource('attendance-lists','AttendanceListsController');
 
 Route::get('/bookings', 'BookingsController@index');
 Route::get('/rooms', 'MeetingRoomsController@index');
