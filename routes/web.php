@@ -12,11 +12,12 @@
 */
 
 Route::get('/', 'BookingsController@index');
+
 Route::resource('bookings','BookingsController');
 Route::resource('team-members','TeamMembersController');
 Route::resource('teams','TeamsController');
-Route::resource('meeting_rooms','MeetingRoomsController');
-Route::resource('bookings','BookingsController');
+Route::resource('rooms','MeetingRoomsController');
+
 Route::get('/bookings', 'BookingsController@index');
 Route::get('/rooms', 'MeetingRoomsController@index');
 Route::get('/rooms/create', 'MeetingRoomsController@create');
