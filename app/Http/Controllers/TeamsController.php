@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Team;
 class TeamsController extends Controller
 {
     /**
@@ -13,7 +13,9 @@ class TeamsController extends Controller
      */
     public function index()
     {
-        //
+        $teams = Team::orderBy('name', 'desc')->paginate(10);
+        return view('teams.index')->with('teams', $teams);
+        return view('dashboard')->with('teams', $teams);
     }
 
     /**
@@ -23,7 +25,7 @@ class TeamsController extends Controller
      */
     public function create()
     {
-        //
+        return view('teams.create');
     }
 
     /**
@@ -34,7 +36,19 @@ class TeamsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+        $this->validate($request, [
+            'name' => 'required',
+            'description'  => 'required',
+        ]);
+
+        //CREATE team
+        $team = new team;
+        $team->name = $request->input('name');
+        $team->description  = $request->input('description');
+        $team->save();
+
+        return redirect('/teams')->with('success', 'Great Job!, Team Created! :)');
     }
 
     /**
@@ -45,7 +59,9 @@ class TeamsController extends Controller
      */
     public function show($id)
     {
-        //
+        
+        $team = Team::find($id);
+       return view('teams.single')->with('team', $team);
     }
 
     /**
@@ -56,7 +72,9 @@ class TeamsController extends Controller
      */
     public function edit($id)
     {
-        //
+        
+        $team = Team::find($id);
+       return view('teams.edit')->with('team', $team);
     }
 
     /**
@@ -68,7 +86,11 @@ class TeamsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $team->name = $request->input('name');
+        $team->description  = $request->input('description');
+        $team->save();
+
+        return redirect('/teams')->with('success', 'Great Job!, Team Created! :)');
     }
 
     /**
@@ -79,6 +101,9 @@ class TeamsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $team = team::find($id);
+        $team->delete();
+        return redirect('/teams')->with('success','Whohoo! Team Deleted, Now Lets Add More ;)');
+    
     }
 }
