@@ -14,7 +14,7 @@ class MeetingRoomsController extends Controller
      */
     public function index()
     {
-        $meeting_rooms = MeetingRoom::orderBy('meeting_room', 'desc')->paginate(10);
+        $meeting_rooms = MeetingRoom::orderBy('description', 'desc')->paginate(10);
         return view('rooms.index')->with('meeting_rooms', $meeting_rooms);
         return view('dashboard')->with('meeting_rooms', $meeting_rooms);
     }
@@ -26,7 +26,8 @@ class MeetingRoomsController extends Controller
      */
     public function create()
     {
-        //
+        $meeting_rooms = MeetingRoom::orderBy('name', 'desc')->paginate(10);
+        return view('rooms.create')->with('meeting_rooms', $meeting_rooms);
     }
 
     /**
@@ -63,7 +64,7 @@ class MeetingRoomsController extends Controller
     public function show($id)
     {
         $meeting_room = MeetingRoom::find($id);
-        return view('MeetingRooms.edit')->with('meeting_room', $meeting_room);
+        return view('rooms.single')->with('name', $meeting_room);
     }
 
     /**
@@ -76,7 +77,7 @@ class MeetingRoomsController extends Controller
     {
         
         $meeting_room = MeetingRoom::find($id);
-        return view('MeetingRooms.edit')->with('meeting_room', $meeting_room);
+        return view('rooms.edit')->with('name', $meeting_room);
     }
 
     /**
