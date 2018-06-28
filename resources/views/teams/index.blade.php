@@ -21,9 +21,9 @@
                                             </tr>
                                                 @foreach($teams as $team)
                                                     <tr>
-                                                        <td><a class="text-info" href="/rooms/{{$team->id}}">{{$team->name}}</a></td>
+                                                        <td><a class="text-info" href="/teams/{{$team->id}}">{{$team->name}}</a></td>
                                                         <td>{{$team->description}}</td>
-                                                        <td><a href="/rooms/{{$team->id}}" class ="btn btn-sm view-btn">View</a></td>
+                                                        <td><a href="/teams/{{$team->id}}" class ="btn btn-sm view-btn">View</a></td>
                                                     </tr>
                                                 @endforeach
                                         </table>  

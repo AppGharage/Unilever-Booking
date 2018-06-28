@@ -7,26 +7,22 @@
     <br><br>
                          <div class="the-card">
                                 <div class="card-header the-header">
-                                       Update Room Information</b>        
+                                       Update Team Information</b>        
                                 </div>
                                 <div class="container the-card">
-                                    {!! Form::open(['action'=> 'BookingsController@store', 'method' => 'POST'] ) !!}
+                                    {!! Form::open(['action'=> 'TeamsController@store', 'method' => 'POST'] ) !!}
                                     <div class="the-form">
-                                        {{form::label('room_name', 'Room Name ')}}
-                                        {{form::text('meeting_room', '', ['class' => 'form-control', 'placeholder' => 'Room 12'])}}
-                                    </div>
-                                    <div class="the-form">
-                                        {{form::label('agenda', 'Agenda')}}
-                                        {{form::text('agenda', '', ['class' => 'form-control', 'placeholder' => 'Conference'])}}
-                                    </div>
-                                    <div class="the-form">
-                                        {{form::label('capacity', 'Capacity')}}
-                                        {{form::text('capacity', '', ['class' => 'form-control', 'placeholder' => '540cm'])}}
-                                    </div>
+                                            {{form::label('name', 'Team Name ')}}
+                                            {{form::text('name', $team->name, ['class' => 'form-control', 'placeholder' => 'Team 12'])}}
+                                        </div>
+                                        <div class="the-form">
+                                            {{form::label('description', 'Description')}}
+                                            {{form::text('description', $team->description, ['class' => 'form-control', 'placeholder' => 'Team Description'])}}
+                                        </div>
                                     <br>
                                   
                                     <div class="center-btn">
-                                       {{form::submit('Create Room', ['class'=> 'the-button btn btn-sm view-btn '])}}
+                                       {{form::submit('Update Team', ['class'=> 'the-button btn btn-sm view-btn '])}}
                                     </div>    
                                      {!! Form::close() !!}
                             </div>

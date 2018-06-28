@@ -34,7 +34,7 @@
                         {!! Form::close() !!}
                                 <small>Meeting Room  Created at {{$meeting_room ->created_at}}</small>
                                 <hr>
-                                <a href="./{{$meeting_room->id}}/edit" class="btn btn-sm btn-primary">Edit meeting_room </a>
+                                <a href="./{{$meeting_room->id}}/edit" class="btn btn-sm btn-primary">Edit Meeting Room </a>
                                 {!! Form::open(['action'=> ['MeetingRoomsController@destroy', $meeting_room ->id], 'method' => 'POST', 'class' => 'float-right'] ) !!}
                                     {{Form::hidden('_method', 'DELETE')}}
                                     {{Form::submit('Delete' ,['class' => 'btn btn-sm btn-danger'])}}
