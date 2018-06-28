@@ -8,31 +8,29 @@
 
     <div class="the-card">
             <div class="card-header text-light the-header">
-                    <a href="/rooms/create"><i class="fas fa-plus-square plus-btn btn btn-light"></i></a><b>Meeting Rooms</b>        
+                    <a href="/rooms/create"><i class="fas fa-plus-square plus-btn btn btn-light"></i></a><b>Team Members</b>        
             </div>
                 <div class=" text-center text-secondary">
-                        @if(count($meeting_rooms) > 0)
+                        @if(count($team_members) > 0)
                                     <div class="table-responsive">
                                         <table class=" container table text-secondary">
                                             <tr class="thead-light">
-                                                <th>Room Name</th>
-                                                <th>Description</th>
-                                                <th>Capacity</th>
+                                                <th>Team Id</th>
+                                                <th>Staff Id</th>
                                                 <th>Action</th>
                                             </tr>
-                                                @foreach($meeting_rooms as $meeting_room)
+                                                @foreach($team_members as $team_member)
                                                     <tr>
-                                                        <td><a class="text-info" href="/rooms/{{$meeting_room->id}}">{{$meeting_room->name}}</a></td>
-                                                        <td>{{$meeting_room->description}}</td>
-                                                        <td>{{$meeting_room->capacity}}</td>
-                                                        <td><a href="/rooms/{{$meeting_room->id}}" class ="btn btn-sm view-btn">View</a></td>
+                                                        <td><a class="text-info" href="/rooms/{{$team_member->id}}">{{$team_member->team_id}}</a></td>
+                                                        <td>{{$team_member->staff_id}}</td>
+                                                        <td><a href="/rooms/{{$team_member->id}}" class ="btn btn-sm view-btn">View</a></td>
                                                     </tr>
                                                 @endforeach
                                         </table>  
                                     </div> 
-                            {{$meeting_rooms->links()}}
+                            {{$team_members->links()}}
                         @else
-                            <p>No Meeting Rooms Available :'(</p>
+                            <p>No Team Members Available :'(</p>
                         @endif
                
             </div>
