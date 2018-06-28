@@ -116,15 +116,23 @@ body{
     border-radius: 20px;
     font-weight: bold;
     line-height: normal;
-    color: rgb(41, 105, 119);
+    color: rgb(255, 255, 255);
     float: right;
     margin-right: 50px;
     transition: all 0.3s ease-in-out;
     text-decoration: none;
 }  
+.user{
+    margin-right: 30px;
+    color: #53556E;
+    transition: 0.3s ease-in;
+}
+.user:hover{
+    color: rgb(41, 158, 183);
+}
 .book-btn:hover{
     background: rgb(52, 203, 236);
-    color: rgb(41, 105, 119);
+    color: #fff;
     text-decoration: none;
 }
 .data-cube{
