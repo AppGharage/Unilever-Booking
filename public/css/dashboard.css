@@ -35,7 +35,9 @@ body{
     padding: 20px 20px 20px 170px;
 }
 .logo-container{
-    padding: 20px 30px; 
+    padding: 20px 25px; 
+    background: rgb(255, 255, 255);
+    border-radius: 5px 40px 0px 5px;
 }
 
 .the-card{
@@ -43,7 +45,7 @@ body{
     margin: auto;
     border-radius: 5px;
     max-width: 1000px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, .045)
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .045);
 }
 .the-header{
     color: white;
@@ -98,10 +100,7 @@ body{
     color:rgb(41, 158, 183);
 }
 .logo{
-    font-weight: 900;
-    line-height: normal;
     font-size: 44px;
-    color: #53556E;
 }
 .title{
     font-weight: 600;

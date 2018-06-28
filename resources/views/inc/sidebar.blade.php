@@ -1,12 +1,11 @@
 <div class="side-bar">
     <div class="logo-container">
-        <h1 class="logo">B</h1>
+        <img src="{{asset('logo/logo.svg')}}" class="logo"alt="logo">
     </div>
     <a href="/dashboard"  class="tooltips">
         <i class="fas fa-tachometer-alt sidebar-icon dash-icon"></i>
         <span class="tooltiptexts">Dashboard </span>
       </a><br>
-    
    
     <a href="/bookings"  class="tooltips">
         <i class="fas fa-clipboard-list sidebar-icon"></i>
