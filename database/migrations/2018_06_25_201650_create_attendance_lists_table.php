@@ -18,6 +18,7 @@ class CreateAttendanceListsTable extends Migration
             $table->string('staff_id');
             $table->string('booking_id');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

@@ -18,6 +18,7 @@ class CreateTeamMembersTable extends Migration
             $table->string('team_id');
             $table->string('staff_id');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

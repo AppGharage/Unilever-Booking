@@ -19,6 +19,7 @@ class CreateMeetingRoomsTable extends Migration
             $table->string('description');
             $table->integer('capacity');
             $table->timestamps();
+            $table->softDeletes();
 
         });
     }

@@ -24,6 +24,7 @@ class CreateBookingsTable extends Migration
             $table->string('end_time');
             $table->string('status');
             $table->timestamps();
+            $table->softDeletes();
 
         });
     }
