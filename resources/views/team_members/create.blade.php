@@ -7,26 +7,22 @@
     <br><br>
                          <div class="the-card">
                                 <div class="card-header the-header">
-                                       Create Room</b>        
+                                       Create Team Member</b>        
                                 </div>
                                 <div class="container the-card">
-                                    {!! Form::open(['action'=> 'MeetingRoomsController@store', 'method' => 'POST'] ) !!}
+                                    {!! Form::open(['action'=> 'TeamMembersController@store', 'method' => 'POST'] ) !!}
                                     <div class="the-form">
-                                        {{form::label('name', 'Room Name ')}}
-                                        {{form::text('name', '', ['class' => 'form-control', 'placeholder' => 'Room 12'])}}
+                                        {{form::label('team_id', 'Team Id ')}}
+                                        {{form::text('team_id', '', ['class' => 'form-control', 'placeholder' => 'T3VM22'])}}
                                     </div>
                                     <div class="the-form">
-                                        {{form::label('description', 'Description')}}
-                                        {{form::text('description', '', ['class' => 'form-control', 'placeholder' => 'Auditorium'])}}
-                                    </div>
-                                    <div class="the-form">
-                                        {{form::label('capacity', 'Capacity')}}
-                                        {{form::text('capacity', '', ['class' => 'form-control', 'placeholder' => '540cm'])}}
+                                        {{form::label('staff_id', 'Staff Id')}}
+                                        {{form::text('staff_id', '', ['class' => 'form-control', 'placeholder' => 'STVFF22'])}}
                                     </div>
                                     <br>
                                   
                                     <div class="center-btn">
-                                       {{form::submit('Create Room', ['class'=> 'the-button btn btn-sm view-btn '])}}
+                                       {{form::submit('Create Team Member', ['class'=> 'the-button btn btn-sm view-btn '])}}
                                     </div>    
                                      {!! Form::close() !!}
                             </div>

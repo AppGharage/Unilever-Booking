@@ -7,26 +7,22 @@
     <br><br>
                          <div class="the-card">
                                 <div class="card-header the-header">
-                                       Update Room Information</b>        
+                                      <b> Update Team Member Information</b>        
                                 </div>
                                 <div class="container the-card">
                                     {!! Form::open(['action'=> 'BookingsController@store', 'method' => 'POST'] ) !!}
                                     <div class="the-form">
-                                        {{form::label('room_name', 'Room Name ')}}
-                                        {{form::text('meeting_room', '', ['class' => 'form-control', 'placeholder' => 'Room 12'])}}
-                                    </div>
-                                    <div class="the-form">
-                                        {{form::label('agenda', 'Agenda')}}
-                                        {{form::text('agenda', '', ['class' => 'form-control', 'placeholder' => 'Conference'])}}
-                                    </div>
-                                    <div class="the-form">
-                                        {{form::label('capacity', 'Capacity')}}
-                                        {{form::text('capacity', '', ['class' => 'form-control', 'placeholder' => '540cm'])}}
-                                    </div>
+                                            {{form::label('team_id', 'Team Id ')}}
+                                            {{form::text('team_id', $team_member->team_id, ['class' => 'form-control', 'placeholder' => 'T3VM22'])}}
+                                        </div>
+                                        <div class="the-form">
+                                            {{form::label('staff_id', 'Staff Id')}}
+                                            {{form::text('staff_id',$team_member->staff_id, ['class' => 'form-control', 'placeholder' => 'STVFF22'])}}
+                                        </div>
                                     <br>
                                   
                                     <div class="center-btn">
-                                       {{form::submit('Create Room', ['class'=> 'the-button btn btn-sm view-btn '])}}
+                                       {{form::submit('Update Team Member', ['class'=> 'the-button btn btn-sm view-btn '])}}
                                     </div>    
                                      {!! Form::close() !!}
                             </div>
