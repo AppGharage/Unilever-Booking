@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\AttendanceList;
 
 class AttendanceListsController extends Controller
 {
@@ -13,7 +14,9 @@ class AttendanceListsController extends Controller
      */
     public function index()
     {
-        //
+        $attendance_lists = AttendanceList::orderBy('staff_id', 'desc')->paginate(10);
+        return view('attendance_lists.index')->with('attendance_lists', $attendance_lists);
+        return view('dashboard')->with('attendance_lists', $attendance_lists);
     }
 
     /**
@@ -23,7 +26,7 @@ class AttendanceListsController extends Controller
      */
     public function create()
     {
-        //
+        return view('attendance_lists.create');
     }
 
     /**
@@ -34,7 +37,19 @@ class AttendanceListsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'staff_id'  => 'required',
+            'booking_id' => 'required',
+        ]);
+
+        //CREATE Attendance List
+        $attendance_list = new AttendanceList;
+        $attendance_list->staff_id = $request->input('staff_id');
+        $attendance_list->booking_id  = $request->input('booking_id');
+        $attendance_list->save();
+
+        return redirect('/attendance-lists')->with('success', 'Great Job!, Attendee Created! :)');
+    
     }
 
     /**
@@ -45,7 +60,9 @@ class AttendanceListsController extends Controller
      */
     public function show($id)
     {
-        //
+        $attendance_list = AttendanceList::find($id);
+       return view('attendance_lists.single')->with('attendance_list', $attendance_list);
+    
     }
 
     /**
@@ -56,7 +73,10 @@ class AttendanceListsController extends Controller
      */
     public function edit($id)
     {
-        //
+        
+        $attendance_list = AttendanceList::find($id);
+       return view('attendance_lists.edit')->with('attendance_list', $attendance_list);
+    
     }
 
     /**
