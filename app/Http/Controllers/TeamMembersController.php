@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\TeamMember;
+
 class TeamMembersController extends Controller
 {
     /**
@@ -13,7 +14,7 @@ class TeamMembersController extends Controller
      */
     public function index()
     {
-        $team_members = TeamMember::orderBy('name', 'desc')->paginate(10);
+        $team_members = TeamMember::orderBy('team_id', 'desc')->paginate(10);
         return view('team_members.index')->with('team_members', $team_members);
         return view('dashboard')->with('team_members', $team_members);
     }
@@ -25,19 +26,7 @@ class TeamMembersController extends Controller
      */
     public function create()
     {
-        $this->validate($request, [
-            'team_id' => 'required',
-            'staff_id'  => 'required',
-        ]);
-
-        //CREATE meeting_room 
-        $team_member  = new TeamMember ;
-        $team_member ->team_id  = $request->input('team_id');
-        $team_member ->staff_id  = $request->input('staff_id');
-        $team_member ->save();
-
-        return redirect('/team-members')->with('success', 'Great Job!, Team Member  Created! :)');
-    
+        return view('team_members.create');
     }
 
     /**
@@ -48,7 +37,19 @@ class TeamMembersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'team_id' => 'required',
+            'staff_id'  => 'required',
+        ]);
+
+        //CREATE team_member 
+        $team_member  = new TeamMember;
+        $team_member ->team_id  = $request->input('team_id');
+        $team_member ->staff_id  = $request->input('staff_id');
+        $team_member ->save();
+
+        return redirect('/team-members')->with('success', 'Great Job!, Team Member  Created! :)');
+    
     }
 
     /**
@@ -59,7 +60,9 @@ class TeamMembersController extends Controller
      */
     public function show($id)
     {
-        //
+        
+        $team_member = TeamMember::find($id);
+       return view('team_members.single')->with('team_member', $team_member);
     }
 
     /**
@@ -70,7 +73,9 @@ class TeamMembersController extends Controller
      */
     public function edit($id)
     {
-        //
+        
+        $team_member = TeamMember::find($id);
+       return view('team_members.edit')->with('team_member', $team_member);
     }
 
     /**
@@ -82,7 +87,12 @@ class TeamMembersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+       
+        $team_member ->team_id  = $request->input('team_id');
+        $team_member ->staff_id  = $request->input('staff_id');
+        $team_member->save();
+
+        return redirect('/team-members')->with('success', 'Great Job!, Team Member Created! :)');
     }
 
     /**
@@ -93,6 +103,10 @@ class TeamMembersController extends Controller
      */
     public function destroy($id)
     {
-        //
+        
+        $team_member = TeamMember::find($id);
+        $team_member->delete();
+        return redirect('/team-members')->with('success','Whohoo! Team Member Deleted, Now Lets Add More ;)');
+    
     }
 }
