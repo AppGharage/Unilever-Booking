@@ -9,6 +9,7 @@ body{
     width: 94px;
     height: 100%;
     position: fixed;
+    z-index: 9999;
     margin-top: -75px;
     background: #262734;
     box-shadow: 0px 4px 20px rgba(38, 39, 52, 0.8);
@@ -21,9 +22,9 @@ body{
     float: left;
 }
 .cube-icon{
-    font-size: 64px;
-    color: #343548;
-    padding: 16px 55px;
+    font-size: 54px;
+    color: #53556E;
+    padding: 10px 57px 0px 57px;
 }
 .nav{
     height: 70px;
@@ -230,8 +231,24 @@ input[type=date] ,input[type=time]{
 }
 .available-rooms{
     max-width: 750px;
-    height: 360px;
+    max-height: 370px;
     margin: auto;
+}
+.card-value{
+    text-align: center;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 32px;
+    color: #53556E;
+    text-align: center
+}
+.icon-text{
+    font-size: 14px;
+    font-weight: bold;
+    color: #53556E;
+    text-align: center;
+    
 }
 .requests{
     max-width: 822px;
@@ -253,6 +270,30 @@ input[type=date] ,input[type=time]{
     max-width: 330px;
     height: 205px;
     border-radius: 10px;
+}
+.sub-header{
+    font-size: 20px !important;
+    padding: 10px 10px 0px;
+    color: rgb(85, 87, 111) !important;
+    text-align: center;
+}
+.td{
+    font-size: 12px !important;
+    padding: 3px !important;
+    color: rgb(85, 87, 111) !important;
+    border-bottom: 0.5px solid rgb(85, 87, 111)!important;
+}
+.th{
+    font-size: 14px !important;
+    padding: 3px !important;
+    color: rgb(85, 87, 111);
+    border-bottom: 1px solid  rgb(85, 87, 111) !important;
+    border-top: 1px solid rgb(85, 87, 111) !important;
+}
+.page-link{
+    background: #53556E !important;
+    color: #fff !important;
+    border: 0.5px solid rgb(101, 104, 134) !important;
 }
 @media (min-width: 1025px) and (max-width: 1280px ){
     .top-container{
