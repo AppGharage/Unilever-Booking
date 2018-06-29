@@ -8,7 +8,7 @@
 
     <div class="the-card">
             <div class="card-header text-light the-header">
-                    <a href="/attendance-lists/create"><i class="fas fa-user-plus  plus-btn btn btn-light"></i></a><b>attendance_lists</b>        
+                    <a href="/attendance-lists/create"><i class="fas fa-user-plus  plus-btn btn btn-light"></i></a><b>Attendance Lists</b>        
             </div>
                 <div class=" text-center text-secondary">
                         @if(count($attendance_lists) > 0)

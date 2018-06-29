@@ -3,6 +3,9 @@
         @guest   
              <h3 class="title">Booking</h3>
         @else 
+        <button class="navbar-toggler menu-btn navbar-toggler-right" type="button" data-toggle="collapse" data-target="#sidebar" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-th menu-icon"></i>
+        </button>
         <h3 class="title">Dashboard</h3>
         
         <a href="/create" class="book-btn"> <i class="fas fa-calendar-plus"></i>
@@ -18,7 +21,9 @@
             @else
                 <li class="nav-item  pull-right dropdown">
                     <a id="navbarDropdown " class="nav-link user dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                        Hi {{ Auth::user()->first_name }}  <span class="caret"></span>
+                            <i class="fas fa-user-circle"></i>
+                            {{ Auth::user()->first_name }} 
+                            <span class="caret"></span>
                     </a>
 
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
