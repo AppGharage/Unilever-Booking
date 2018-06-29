@@ -106,7 +106,7 @@ class MeetingRoomsController extends Controller
         $meeting_room ->capacity  = $request->input('capacity');
         $meeting_room ->save();
 
-        return redirect('/rooms')->with('success', 'Great Job!, Meeting Room Created! :)');
+        return redirect('/rooms')->with('success', 'Great Job!, Meeting Room Updated! :)');
     
     }
 

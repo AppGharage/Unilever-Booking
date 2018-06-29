@@ -98,7 +98,7 @@ class AttendanceListsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        return view('attendance_lists.index')->with('success', "You're not allowed to make those updates :)");
     }
 
     /**

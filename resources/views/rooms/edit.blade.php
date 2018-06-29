@@ -10,7 +10,7 @@
                                        Update Room Information</b>        
                                 </div>
                                 <div class="container the-card">
-                                    {!! Form::open(['action'=> 'BookingsController@store', 'method' => 'POST'] ) !!}
+                                    {!! Form::open(['action'=> 'MeetingRoomsController@store', 'method' => 'POST'] ) !!}
                                     <div class="the-form">
                                         {{form::label('room_name', 'Room Name ')}}
                                         {{form::text('name', $meeting_room->name, ['class' => 'form-control', 'placeholder' => 'Room 12'])}}
