@@ -11,8 +11,6 @@
 |
 */
 
-Route::get('/', 'BookingsController@index');
-
 Route::resource('bookings','BookingsController');
 Route::resource('team-members','TeamMembersController');
 Route::resource('teams','TeamsController');
@@ -25,4 +23,7 @@ Route::get('/rooms/create', 'MeetingRoomsController@create');
 Route::get('/create', 'BookingsController@create');
 Auth::routes();
 
+// GETTING VALUES
+
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+Route::get('/', 'DashboardController@index');
