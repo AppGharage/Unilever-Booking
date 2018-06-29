@@ -19,7 +19,7 @@
                                                 <th>Agenda</th>
                                                 <th>Booked For</th>
                                                 <th>Booked By</th>
-                                                <th>status</th>
+                                                <th>Status</th>
                                                 <th>Date</th>
                                                 <th>Start Time</th>
                                                 <th>End Time</th>
