@@ -11,6 +11,7 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
+        $api_token = str_random('api_token', 60);
         $password = bcrypt('secret');
         DB::table('users')->insert([
             'first_name' => 'Admin',
@@ -19,6 +20,8 @@ class UsersTableSeeder extends Seeder
             'level' => 'Manager',
             'email' => 'admin@test.com',
             'password' => $password,
+            'api_token' => $api_token,
         ]);
+
     }
 }
