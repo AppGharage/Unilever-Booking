@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class MeetingRoom extends Model
 {
+    protected $fillable = ['name', 'description','capacity'];
     
     use SoftDeletes;
 

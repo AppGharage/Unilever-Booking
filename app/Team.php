@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Team extends Model
 {
+    protected $fillable = ['name', 'description'];
    
     use SoftDeletes;
 
