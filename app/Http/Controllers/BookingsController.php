@@ -120,7 +120,6 @@ class BookingsController extends Controller
         $booking->save();
 
         return redirect('/bookings')->with('success', 'Great Job!, Booking Updated! :)');
-    
     }
 
     /**
@@ -133,7 +132,10 @@ class BookingsController extends Controller
     {
         $booking = booking::find($id);
         $booking->delete();
-        return redirect('/bookings')->with('success','Whohoo! Booking Deleted, Now Lets Add More ;)');
-    
+        return redirect('/bookings')->with('success','Whohoo! Booking Deleted, Now Lets Add More ;)')->with(204);
+    }
+    public function read(){
+        $bookings = Booking::orderBy('meeting_room', 'desc')->paginate(10);
+        return view('dashboard')->with('bookings', $bookings);
     }
 }

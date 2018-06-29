@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Booking;
+use App\MeetingRoom;
 
 class DashboardController extends Controller
 {
@@ -18,7 +20,12 @@ class DashboardController extends Controller
     
     public function index()
     {
-        return view('dashboard');
+        $bookings = Booking::orderBy('meeting_room', 'desc')->paginate(6);
+        return view('dashboard')->with('bookings', $bookings);
+        
     }
-
+    public function meetingRoom(){
+        $meeting_rooms = MeetingRoom::orderBy('description', 'desc')->paginate(5);
+        return view('dashboard')->with('meeting_rooms', $meeting_rooms);
+    }
 }

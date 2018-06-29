@@ -118,9 +118,13 @@ class MeetingRoomsController extends Controller
      */
     public function destroy($id)
     {
-        $meeting_room = booking::find($id);
+        $meeting_room = MeetingRoom::find($id);
         $meeting_room->delete();
         return redirect('/rooms')->with('success','Whohoo! Meeting Room Deleted, Now Lets Add More ;)');
     
+    }
+    public function read(){
+        $meeting_rooms = MeetingRoom::orderBy('name', 'desc')->paginate(10);
+        return view('dashboard')->with('meeting_rooms', $meeting_rooms);
     }
 }
