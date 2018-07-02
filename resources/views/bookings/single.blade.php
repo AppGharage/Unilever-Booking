@@ -6,7 +6,7 @@
     <div class="main">
                     <div class="the-card ">
                         <div class="card-header text-light the-header">
-                                <b> <?php echo"$booking->meeting_room"; ?></b>        
+                                <b> <?php echo"$booking->booked_for"; ?>'s Booking</b>        
                         </div>
                         <div class="container">
                                 <br>
