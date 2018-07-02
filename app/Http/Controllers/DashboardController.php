@@ -22,7 +22,7 @@ class DashboardController extends Controller
     
     public function index()
     {
-        $bookings = Booking::orderBy('meeting_room', 'desc')->paginate(6);
+        $bookings = Booking::orderBy('meeting_room', 'desc')->paginate(8);
         $rooms = MeetingRoom::orderBy('name', 'desc')->paginate(4);
         $teams = Team::orderBy('name', 'desc')->paginate(2);
         return view('dashboard')
