@@ -231,7 +231,7 @@ input[type=date] ,input[type=time]{
 }
 .available-rooms{
     max-width: 750px;
-    max-height: 370px;
+    height: 355px;
     margin: auto;
 }
 .card-value{
