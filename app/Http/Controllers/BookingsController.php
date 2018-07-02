@@ -27,7 +27,6 @@ class BookingsController extends Controller
     {
         $bookings = Booking::orderBy('meeting_room', 'desc')->paginate(10);
         return view('bookings.index')->with('bookings', $bookings);
-        return view('dashboard')->with('bookings', $bookings);
     }
 
     /**
@@ -136,6 +135,5 @@ class BookingsController extends Controller
     }
     public function read(){
         $bookings = Booking::orderBy('meeting_room', 'desc')->paginate(10);
-        return view('dashboard')->with('bookings', $bookings);
     }
 }

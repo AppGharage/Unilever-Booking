@@ -25,7 +25,6 @@ class TeamsController extends Controller
     {
         $teams = Team::orderBy('name', 'desc')->paginate(10);
         return view('teams.index')->with('teams', $teams);
-        return view('dashboard')->with('teams', $teams);
     }
 
     /**
@@ -111,7 +110,7 @@ class TeamsController extends Controller
      */
     public function destroy($id)
     {
-        $team = team::find($id);
+        $team = Team::find($id);
         $team->delete();
         return redirect('/teams')->with('success','Whohoo! Team Deleted, Now Lets Add More ;)');
     

@@ -26,7 +26,6 @@ class MeetingRoomsController extends Controller
     {
         $meeting_rooms = MeetingRoom::orderBy('description', 'desc')->paginate(10);
         return view('rooms.index')->with('meeting_rooms', $meeting_rooms);
-        return view('dashboard')->with('meeting_rooms', $meeting_rooms);
     }
 
     /**
@@ -125,6 +124,5 @@ class MeetingRoomsController extends Controller
     }
     public function read(){
         $meeting_rooms = MeetingRoom::orderBy('name', 'desc')->paginate(10);
-        return view('dashboard')->with('meeting_rooms', $meeting_rooms);
     }
 }

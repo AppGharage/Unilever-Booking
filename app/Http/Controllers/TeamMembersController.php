@@ -27,7 +27,6 @@ class TeamMembersController extends Controller
     {
         $team_members = TeamMember::orderBy('team_id', 'desc')->paginate(10);
         return view('team_members.index')->with('team_members', $team_members);
-        return view('dashboard')->with('team_members', $team_members);
     }
 
     /**

@@ -26,7 +26,6 @@ class AttendanceListsController extends Controller
     {
         $attendance_lists = AttendanceList::orderBy('staff_id', 'desc')->paginate(10);
         return view('attendance_lists.index')->with('attendance_lists', $attendance_lists);
-        return view('dashboard')->with('attendance_lists', $attendance_lists);
     }
 
     /**
