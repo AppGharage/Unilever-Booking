@@ -11,7 +11,7 @@
                                 <div class="sub-header ">
                                         <b class="">Recent Reservations</b>        
                                 </div>
-                                    <div class=" container text-center text-secondary">
+                                    <div class="container text-center text-secondary">
                                             @if(count($bookings) > 0)
                                                         <div class="container table-responsive">
                                                             <table class=" container table text-secondary">

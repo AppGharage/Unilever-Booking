@@ -5,9 +5,6 @@
 body{
     background: #3E3F53 !important;
 }
-.th{
-    color: #fff !important;
-}
 
 .side-bar{
     width: 94px;
@@ -244,7 +241,7 @@ input[type=date] ,input[type=time]{
     font-weight: bold;
     line-height: normal;
     font-size: 32px;
-    color: #53556E;
+    color: #ffffff;
     text-align: center
 }
 .icon-text{
@@ -285,13 +282,13 @@ input[type=date] ,input[type=time]{
     font-size: 12px !important;
     padding: 3px !important;
     border-top: 0.5px solid rgb(85, 87, 111)!important;
-    color: rgb(85, 87, 111) !important;
+    color: #fff !important;
     border-bottom: 0.5px solid rgb(85, 87, 111)!important;
 }
 .th{
     font-size: 14px !important;
     padding: 3px !important;
-    color: rgb(85, 87, 111);
+    color: rgb(129, 130, 144);
     border-bottom: 1px solid  rgb(85, 87, 111) !important;
     border-top: 1px solid rgb(85, 87, 111) !important;
 }
