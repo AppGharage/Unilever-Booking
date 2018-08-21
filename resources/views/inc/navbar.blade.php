@@ -8,7 +8,7 @@
         </button>
         <h3 class="title">Dashboard</h3>
         
-        <a href="/create" class="book-btn"> <i class="fas fa-calendar-plus"></i>
+        <a href="/create" class="book-btn"> 
               Book Room</a>
          @endguest     
         <ul class="navbar-nav ml-auto float-right">
@@ -21,7 +21,6 @@
             @else
                 <li class="nav-item  pull-right dropdown">
                     <a id="navbarDropdown " class="nav-link user dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                            <i class="fas fa-user-circle"></i>
                             {{ Auth::user()->first_name }} 
                             <span class="caret"></span>
                     </a>

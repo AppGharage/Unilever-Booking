@@ -5,6 +5,10 @@
 body{
     background: #3E3F53 !important;
 }
+.th{
+    color: #fff !important;
+}
+
 .side-bar{
     width: 94px;
     height: 100%;

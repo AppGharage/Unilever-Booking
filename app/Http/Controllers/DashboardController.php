@@ -10,7 +10,7 @@ use App\AttendanceList;
 
 class DashboardController extends Controller
 {
-            /**
+    /**
      * Create a new controller instance.
      *
      * @return void
@@ -32,6 +32,7 @@ class DashboardController extends Controller
         ->with('bookings_count', Booking::all())
         ->with('rooms_count', MeetingRoom::all())
         ->with('teams_count', Team::all())
-        ->with('attendees_count', AttendanceList::all());;
+        ->with('attendees_count', AttendanceList::all());
+        ;
     }
 }

@@ -67,14 +67,13 @@
                                    
                                 </div>
                         </div>
-                        <div class="data-cube all-cards">
-                                <i class="fas fa-clipboard-check cube-icon" style="color: #09B394;"></i>
-                                <p class="icon-text"style="color: #09B394;">Reservations <br><b class="card-value">{{count($bookings_count)}}</b></p>
+                        <div class="data-cube all-cards" style="padding-top:30px;">
+                                <h1 class="icon-text"style="color: #09B394;font-size:20px;">Reservations <br><b class="card-value">{{count($bookings_count)}}</b></h1>
                         </div>
 
                         <div class="data-cube all-cards">
-                            <i class="fas fa-th-large  cube-icon" style="font-size:48px;color: #535AAD; padding: 10px 53px 0px 53px;"></i>
-                           <p class="icon-text"style="color: #535AAD;">Rooms <br><b class="card-value">{{count($rooms_count)}}</b></p>
+                        <div class="data-cube all-cards" style="padding-top:30px;">
+                           <p class="icon-text"style="color: #535AAD;font-size:20px;">Rooms <br><b class="card-value">{{count($rooms_count)}}</b></p>
                    
                         </div>
                     </div>
@@ -112,14 +111,12 @@
                     </div>
                 </div>
                 <div class="bottom-right">
-                    <div class="data-cube all-cards">
-                        <i class="fas fa-list-alt cube-icon" style="font-size:48px; color:#28ADCA;padding: 10px 53px 0px 53px;"></i>
-                        <p class="icon-text" style="color:#28ADCA;">Attendees <br><b class="card-value">{{count($attendees_count)}}</b></p>
+                    <div class="data-cube all-cards" style="padding-top:30px;">
+                        <p class="icon-text" style="color:#28ADCA;font-size:20px;">Attendees <br><b class="card-value">{{count($attendees_count)}}</b></p>
                 
                     </div>
-                    <div class="data-cube all-cards">
-                                <i class="fas fa-users cube-icon"style="font-size:48px;color:#C55297; padding: 10px 46px 0px 46px;"></i>
-                                <p class="icon-text" style="color:#C55297;">Teams <br><b class="card-value">{{count($teams_count)}}</b></p>
+                    <div class="data-cube all-cards" style="padding-top:30px;">
+                                <p class="icon-text" style="color:#C55297;font-size:20px;">Teams <br><b class="card-value">{{count($teams_count)}}</b></p>
                         
                     </div>
             </div>
